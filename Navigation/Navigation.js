@@ -9,6 +9,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Search from '../Components/Search';
 import FilmDetail from '../Components/FilmDetail';
 import Favorites from '../Components/Favorites';
+import News from '../Components/News';
 import Test from '../Components/Test';
 
 const SearchStackNavigator = createStackNavigator({
@@ -33,7 +34,19 @@ const FavoritesStackNavigator = createStackNavigator({
   FilmDetail: {
     screen: FilmDetail
   }
-})
+});
+
+const NewsStackNavigator = createStackNavigator({
+  News: {
+    screen: News,
+    navigationOptions: {
+      title: 'Les Derniers Films',
+    },
+  },
+  FilmDetail: {
+    screen: FilmDetail,
+  }
+});
 
 const MoviesTabNavigator = createBottomTabNavigator(
   {
@@ -56,6 +69,16 @@ const MoviesTabNavigator = createBottomTabNavigator(
         tabBarIcon: () => {
           return <Image
             source={require('../Images/ic_favorite.png')}
+            style={styles.icon} />
+        }
+      }
+    },
+    News: {
+      screen: NewsStackNavigator,
+      navigationOptions: {
+        tabBarIcon: () => {
+          return <Image
+            source={require('../Images/ic_fiber_new.png')}
             style={styles.icon} />
         }
       }
