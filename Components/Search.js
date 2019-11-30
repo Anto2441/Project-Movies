@@ -70,6 +70,7 @@ class Search extends React.Component {
   }
 
   render() {
+    console.log("TEST Chrome Developper Tools")
     return (
       <SafeAreaView style={styles.main_container}>
         <TextInput

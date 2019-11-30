@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     flex: 1,
     flexWrap: 'wrap',
-    paddingRight: 5
+    paddingRight: 5,
   },
   vote_text: {
     fontWeight: 'bold',
